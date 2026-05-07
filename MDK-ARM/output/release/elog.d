@@ -1,0 +1,9 @@
+.\output\release\elog.o: ..\Middlewares\EasyLogger\src\elog.c
+.\output\release\elog.o: ..\Middlewares\EasyLogger\inc\elog.h
+.\output\release\elog.o: ..\Middlewares\EasyLogger\inc\elog_cfg.h
+.\output\release\elog.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\release\elog.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\release\elog.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\output\release\elog.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\string.h
+.\output\release\elog.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdarg.h
+.\output\release\elog.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdio.h

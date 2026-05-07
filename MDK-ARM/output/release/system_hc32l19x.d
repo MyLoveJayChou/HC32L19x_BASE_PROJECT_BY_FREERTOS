@@ -1,0 +1,13 @@
+.\output\release\system_hc32l19x.o: ..\Core\Src\system_hc32l19x.c
+.\output\release\system_hc32l19x.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\base_types.h
+.\output\release\system_hc32l19x.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdio.h
+.\output\release\system_hc32l19x.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\string.h
+.\output\release\system_hc32l19x.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\release\system_hc32l19x.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\release\system_hc32l19x.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\assert.h
+.\output\release\system_hc32l19x.o: ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include\hc32l19x.h
+.\output\release\system_hc32l19x.o: ..\Drivers\CMSIS\Core\Include\core_cm0plus.h
+.\output\release\system_hc32l19x.o: ..\Drivers\CMSIS\Core\Include\cmsis_version.h
+.\output\release\system_hc32l19x.o: ..\Drivers\CMSIS\Core\Include\cmsis_compiler.h
+.\output\release\system_hc32l19x.o: ..\Drivers\CMSIS\Core\Include\cmsis_armcc.h
+.\output\release\system_hc32l19x.o: ..\Core\Inc\system_hc32l19x.h

@@ -1,0 +1,17 @@
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Src\port.c
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\FreeRTOS.h
+.\output\release\port.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\release\port.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\release\port.o: ..\Core\Inc\FreeRTOSConfig.h
+.\output\release\port.o: ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include\hc32l19x.h
+.\output\release\port.o: ..\Drivers\CMSIS\Core\Include\core_cm0plus.h
+.\output\release\port.o: ..\Drivers\CMSIS\Core\Include\cmsis_version.h
+.\output\release\port.o: ..\Drivers\CMSIS\Core\Include\cmsis_compiler.h
+.\output\release\port.o: ..\Drivers\CMSIS\Core\Include\cmsis_armcc.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\projdefs.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\portable.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\deprecated_definitions.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\portmacro.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\mpu_wrappers.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\task.h
+.\output\release\port.o: ..\Middlewares\FreeRTOS\Inc\list.h
