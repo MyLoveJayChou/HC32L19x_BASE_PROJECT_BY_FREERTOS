@@ -14,15 +14,6 @@
 #include "bsp_oled_driver.h"
 
 /**
- * @brief OLED text font size.
- */
-typedef enum
-{
-    OLED_TEXT_FONT_14 = 14U,
-    OLED_TEXT_FONT_16 = 16U,
-} oled_text_font_t;
-
-/**
  * @brief Draw one UTF-8 string by the built-in Chinese font.
  *
  * @param[in] self OLED driver instance.
@@ -41,23 +32,5 @@ oled_driver_status_t bsp_oled_text_draw_utf8(
     uint8_t                    x,
     uint8_t                    y,
     const char                *text);
-
-/**
- * @brief Draw one UTF-8 string by the specified Chinese font.
- *
- * @param[in] self OLED driver instance.
- * @param[in] x    Line start X.
- * @param[in] y    Line start Y.
- * @param[in] text UTF-8 string pointer.
- * @param[in] font Font size selector.
- *
- * @return Status code.
- */
-oled_driver_status_t bsp_oled_text_draw_utf8_by_font(
-    bsp_oled_driver_t *const self,
-    uint8_t                    x,
-    uint8_t                    y,
-    const char                *text,
-    oled_text_font_t           font);
 
 #endif /* __BSP_OLED_TEXT_H__ */

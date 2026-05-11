@@ -1,7 +1,5 @@
 .\output\release\bsp_display_wrapper.o: ..\BSP\OLED\bsp_display_wrapper.c
 .\output\release\bsp_display_wrapper.o: ..\BSP\OLED\bsp_display_wrapper.h
-.\output\release\bsp_display_wrapper.o: ..\BSP\OLED\bsp_oled_text.h
-.\output\release\bsp_display_wrapper.o: ..\BSP\OLED\bsp_oled_driver.h
 .\output\release\bsp_display_wrapper.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\release\bsp_display_wrapper.o: ..\Middlewares\EasyLogger\inc\elog.h
 .\output\release\bsp_display_wrapper.o: ..\Middlewares\EasyLogger\inc\elog_cfg.h

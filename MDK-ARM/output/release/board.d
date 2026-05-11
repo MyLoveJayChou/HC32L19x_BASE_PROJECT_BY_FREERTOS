@@ -20,3 +20,5 @@
 .\output\release\board.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\interrupts_hc32l19x.h
 .\output\release\board.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\ddl_device.h
 .\output\release\board.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\flash.h
+.\output\release\board.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\reset.h
+.\output\release\board.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\spi.h

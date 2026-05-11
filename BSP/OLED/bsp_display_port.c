@@ -15,6 +15,7 @@
 #include "bsp_oled_handler.h"
 #include "elog.h"
 #include "gpio.h"
+#include "spi.h"
 #include "system_hc32l19x.h"
 #include "task.h"
 
@@ -68,38 +69,6 @@ static oled_driver_status_t bsp_display_port_delay_ms(uint32_t delay_ms)
     return OLED_DRIVER_STATUS_OK;
 }
 
-static void bsp_display_port_delay_short(void)
-{
-    bsp_display_port_delay_loop(16U);
-}
-
-static void bsp_display_port_spi_write_byte(uint8_t data)
-{
-    uint8_t bit = 0U;
-
-    for (bit = 0U; 8U > bit; bit++)
-    {
-        Gpio_ClrIO(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN);
-
-        if (0U != (data & 0x80U))
-        {
-            Gpio_SetIO(BOARD_OLED_MOSI_PORT, BOARD_OLED_MOSI_PIN);
-        }
-        else
-        {
-            Gpio_ClrIO(BOARD_OLED_MOSI_PORT, BOARD_OLED_MOSI_PIN);
-        }
-
-        bsp_display_port_delay_short();
-        Gpio_SetIO(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN);
-        bsp_display_port_delay_short();
-
-        data <<= 1U;
-    }
-
-    Gpio_ClrIO(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN);
-}
-
 static oled_driver_status_t bsp_display_port_spi_send(
     const uint8_t *data,
     uint16_t       size)
@@ -111,14 +80,22 @@ static oled_driver_status_t bsp_display_port_spi_send(
         return OLED_DRIVER_STATUS_ERROR_PARAM;
     }
 
+    Spi_SetCS(M0P_SPI0, FALSE);
     Gpio_ClrIO(BOARD_OLED_CS_PORT, BOARD_OLED_CS_PIN);
+    bsp_display_port_delay_loop(256U);
 
     for (index = 0U; size > index; index++)
     {
-        bsp_display_port_spi_write_byte(data[index]);
+        (void)Spi_RWByte(M0P_SPI0, data[index]);
     }
 
+    while (TRUE == Spi_GetStatus(M0P_SPI0, SpiBusy))
+    {
+    }
+
+    bsp_display_port_delay_loop(256U);
     Gpio_SetIO(BOARD_OLED_CS_PORT, BOARD_OLED_CS_PIN);
+    Spi_SetCS(M0P_SPI0, TRUE);
 
     return OLED_DRIVER_STATUS_OK;
 }
@@ -385,47 +362,6 @@ static display_status_t bsp_display_port_draw_text_impl(
                               text));
 }
 
-static display_status_t bsp_display_port_draw_text_by_font_impl(
-    bsp_display_wrapper_dev_t *const dev,
-    uint16_t                   x,
-    uint16_t                   y,
-    const char                *text,
-    oled_text_font_t           font)
-{
-    display_status_t      status  = BSP_DISPLAY_WRAPPER_STATUS_OK;
-    bsp_oled_handler_t   *handler = NULL;
-
-    if (NULL == text)
-    {
-        return BSP_DISPLAY_WRAPPER_STATUS_ERROR_PARAM;
-    }
-
-    if ((0xFFU < x) || (0xFFU < y))
-    {
-        return BSP_DISPLAY_WRAPPER_STATUS_ERROR_PARAM;
-    }
-
-    status = bsp_display_port_get_handler(dev, &handler);
-    if (BSP_DISPLAY_WRAPPER_STATUS_OK != status)
-    {
-        log_e("bsp_display_port_draw_text_by_font_impl: handler error");
-        return status;
-    }
-
-    if (NULL == handler->pf_draw_text_by_font)
-    {
-        log_e("bsp_display_port_draw_text_by_font_impl: draw text not support");
-        return BSP_DISPLAY_WRAPPER_STATUS_ERROR_SOURCE;
-    }
-
-    return bsp_display_port_status_from_handler(
-        handler->pf_draw_text_by_font(handler,
-                                      (uint8_t)x,
-                                      (uint8_t)y,
-                                      text,
-                                      font));
-}
-
 static display_status_t bsp_display_port_get_buffer_impl(
     bsp_display_wrapper_dev_t *const dev,
     uint8_t                **const buffer,
@@ -514,10 +450,11 @@ display_status_t bsp_display_port_init(void)
     wrapper_dev->pf_refresh      = bsp_display_port_refresh_impl;
     wrapper_dev->pf_draw_pixel   = bsp_display_port_draw_pixel_impl;
     wrapper_dev->pf_draw_text    = bsp_display_port_draw_text_impl;
-    wrapper_dev->pf_draw_text_by_font = bsp_display_port_draw_text_by_font_impl;
     wrapper_dev->pf_get_buffer   = bsp_display_port_get_buffer_impl;
     wrapper_dev->pf_set_backlight = NULL;
     wrapper_dev->pf_draw_image    = NULL;
+
+    log_i("bsp dispaly port init success\n");
 
     return BSP_DISPLAY_WRAPPER_STATUS_OK;
 }

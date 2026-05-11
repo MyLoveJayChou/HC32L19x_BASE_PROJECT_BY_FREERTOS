@@ -22,7 +22,7 @@
 #define LV_FONT_SUBPX_NONE     (0U)
 
 #ifndef LVGL_USE_FONT_CN_14
-#define LVGL_USE_FONT_CN_14    (1U)
+#define LVGL_USE_FONT_CN_14    (0U)
 #endif
 
 #define LV_FONT_CN_14          (1U)

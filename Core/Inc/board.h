@@ -21,6 +21,8 @@
 #define BOARD_OLED_RES_PIN    (GpioPin10)
 #define BOARD_OLED_SCL_PORT   (GpioPortA)
 #define BOARD_OLED_SCL_PIN    (GpioPin5)
+#define BOARD_OLED_MISO_PORT  (GpioPortA)
+#define BOARD_OLED_MISO_PIN   (GpioPin6)
 #define BOARD_OLED_MOSI_PORT  (GpioPortA)
 #define BOARD_OLED_MOSI_PIN   (GpioPin7)
 

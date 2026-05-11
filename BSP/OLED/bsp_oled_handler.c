@@ -25,13 +25,6 @@ bsp_oled_handler_status_from_driver(oled_driver_status_t status)
     return (oled_handler_status_t)status;
 }
 
-static oled_handler_status_t bsp_oled_handler_draw_text_by_font_impl(
-    bsp_oled_handler_t *const self,
-    uint8_t                   x,
-    uint8_t                   y,
-    const char               *text,
-    oled_text_font_t          font);
-
 static oled_handler_status_t bsp_oled_handler_check(
     bsp_oled_handler_t *const self)
 {
@@ -211,22 +204,6 @@ static oled_handler_status_t bsp_oled_handler_draw_text_impl(
     uint8_t                   y,
     const char               *text)
 {
-    return bsp_oled_handler_draw_text_by_font_impl(self,
-                                                   x,
-                                                   y,
-                                                   text,
-                                                   (0U != LVGL_USE_FONT_CN_14) ?
-                                                   OLED_TEXT_FONT_14 :
-                                                   OLED_TEXT_FONT_16);
-}
-
-static oled_handler_status_t bsp_oled_handler_draw_text_by_font_impl(
-    bsp_oled_handler_t *const self,
-    uint8_t                   x,
-    uint8_t                   y,
-    const char               *text,
-    oled_text_font_t          font)
-{
     oled_handler_status_t ready_status  = OLED_HANDLER_STATUS_OK;
     oled_driver_status_t  driver_status = OLED_DRIVER_STATUS_OK;
 
@@ -242,14 +219,13 @@ static oled_handler_status_t bsp_oled_handler_draw_text_by_font_impl(
         return ready_status;
     }
 
-    driver_status = bsp_oled_text_draw_utf8_by_font(&self->driver,
-                                                    x,
-                                                    y,
-                                                    text,
-                                                    font);
+    driver_status = bsp_oled_text_draw_utf8(&self->driver,
+                                            x,
+                                            y,
+                                            text);
     if (OLED_DRIVER_STATUS_OK != driver_status)
     {
-        log_e("bsp_oled_handler_draw_text_by_font_impl: draw utf8 failed");
+        log_e("bsp_oled_handler_draw_text_impl: draw utf8 failed");
         return bsp_oled_handler_status_from_driver(driver_status);
     }
 
@@ -306,7 +282,6 @@ oled_handler_status_t bsp_oled_handler_inst(bsp_oled_handler_t *const self,
     self->pf_refresh     = bsp_oled_handler_refresh_impl;
     self->pf_draw_pixel  = bsp_oled_handler_draw_pixel_impl;
     self->pf_draw_text   = bsp_oled_handler_draw_text_impl;
-    self->pf_draw_text_by_font = bsp_oled_handler_draw_text_by_font_impl;
     self->pf_get_driver  = bsp_oled_handler_get_driver_impl;
 
     status = self->pf_init(self);
@@ -320,7 +295,6 @@ oled_handler_status_t bsp_oled_handler_inst(bsp_oled_handler_t *const self,
         self->pf_refresh    = NULL;
         self->pf_draw_pixel = NULL;
         self->pf_draw_text  = NULL;
-        self->pf_draw_text_by_font = NULL;
         self->pf_get_driver = NULL;
         return status;
     }

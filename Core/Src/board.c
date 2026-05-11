@@ -12,6 +12,8 @@
 #include "board.h"
 #include "ddl.h"
 #include "flash.h"
+#include "reset.h"
+#include "spi.h"
 #include "sysctrl.h"
 #include "system_hc32l19x.h"
 
@@ -37,7 +39,7 @@ static void board_clock_init(void)
     Sysctrl_ClkSourceEnable(SysctrlClkPLL, TRUE);
     Sysctrl_SysClkSwitch(SysctrlClkPLL);
     Sysctrl_SetHCLKDiv(SysctrlHclkDiv1);
-    Sysctrl_SetPCLKDiv(SysctrlPclkDiv1);
+    Sysctrl_SetPCLKDiv(SysctrlPclkDiv8);
 
     SystemCoreClock = Sysctrl_GetHClkFreq();
 }
@@ -66,6 +68,48 @@ static void board_gpio_output_init(en_gpio_port_t port,
 }
 
 /**
+ * @brief Initialize OLED hardware SPI resource.
+ */
+static void board_oled_spi_init(void)
+{
+    stc_gpio_cfg_t gpio_cfg;
+    stc_spi_cfg_t  spi_cfg;
+
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralSpi0, TRUE);
+    Reset_RstPeripheral0(ResetMskSpi0);
+
+    DDL_ZERO_STRUCT(gpio_cfg);
+    gpio_cfg.enDir      = GpioDirOut;
+    gpio_cfg.enDrv      = GpioDrvH;
+    gpio_cfg.enPu       = GpioPuDisable;
+    gpio_cfg.enPd       = GpioPdDisable;
+    gpio_cfg.enOD       = GpioOdDisable;
+    gpio_cfg.enCtrlMode = GpioAHB;
+    gpio_cfg.bOutputVal = TRUE;
+
+    Gpio_Init(BOARD_OLED_CS_PORT, BOARD_OLED_CS_PIN, &gpio_cfg);
+
+    gpio_cfg.bOutputVal = FALSE;
+    Gpio_Init(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN, &gpio_cfg);
+    Gpio_Init(BOARD_OLED_MOSI_PORT, BOARD_OLED_MOSI_PIN, &gpio_cfg);
+
+    gpio_cfg.enDir = GpioDirIn;
+    Gpio_Init(BOARD_OLED_MISO_PORT, BOARD_OLED_MISO_PIN, &gpio_cfg);
+
+    Gpio_SetAfMode(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN, GpioAf1);
+    Gpio_SetAfMode(BOARD_OLED_MISO_PORT, BOARD_OLED_MISO_PIN, GpioAf1);
+    Gpio_SetAfMode(BOARD_OLED_MOSI_PORT, BOARD_OLED_MOSI_PIN, GpioAf1);
+
+    DDL_ZERO_STRUCT(spi_cfg);
+    spi_cfg.enSpiMode = SpiMskMaster;
+    spi_cfg.enPclkDiv = SpiClkMskDiv128;
+    spi_cfg.enCPOL    = SpiMskcpollow;
+    spi_cfg.enCPHA    = SpiMskCphafirst;
+
+    (void)Spi_Init(M0P_SPI0, &spi_cfg);
+}
+
+/**
  * @brief Initialize board level resources.
  */
 void board_init(void)
@@ -74,15 +118,11 @@ void board_init(void)
 
     Sysctrl_SetPeripheralGate(SysctrlPeripheralGpio, TRUE);
 
-    board_gpio_output_init(BOARD_OLED_CS_PORT, BOARD_OLED_CS_PIN);
     board_gpio_output_init(BOARD_OLED_DC_PORT, BOARD_OLED_DC_PIN);
     board_gpio_output_init(BOARD_OLED_RES_PORT, BOARD_OLED_RES_PIN);
-    board_gpio_output_init(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN);
-    board_gpio_output_init(BOARD_OLED_MOSI_PORT, BOARD_OLED_MOSI_PIN);
+    board_oled_spi_init();
 
     Gpio_SetIO(BOARD_OLED_CS_PORT, BOARD_OLED_CS_PIN);
     Gpio_ClrIO(BOARD_OLED_DC_PORT, BOARD_OLED_DC_PIN);
     Gpio_SetIO(BOARD_OLED_RES_PORT, BOARD_OLED_RES_PIN);
-    Gpio_ClrIO(BOARD_OLED_SCL_PORT, BOARD_OLED_SCL_PIN);
-    Gpio_ClrIO(BOARD_OLED_MOSI_PORT, BOARD_OLED_MOSI_PIN);
 }

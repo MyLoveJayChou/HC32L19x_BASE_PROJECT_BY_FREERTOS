@@ -61,13 +61,6 @@ typedef struct bsp_oled_handler
                                           uint8_t                    y,
                                           const char                *text);
 
-    oled_handler_status_t (*pf_draw_text_by_font)(
-        bsp_oled_handler_t *const self,
-        uint8_t                    x,
-        uint8_t                    y,
-        const char                *text,
-        oled_text_font_t           font);
-
     oled_handler_status_t (*pf_get_driver)(bsp_oled_handler_t *const self,
                                            bsp_oled_driver_t **const p_driver);
 } bsp_oled_handler_t;

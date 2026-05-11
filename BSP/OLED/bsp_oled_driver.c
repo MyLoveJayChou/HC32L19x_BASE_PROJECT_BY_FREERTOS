@@ -88,7 +88,7 @@ static oled_driver_status_t bsp_oled_driver_init_sequence(
         SH1106_CMD_DISPLAY_OFF,
         SH1106_CMD_SET_LOW_COL,
         SH1106_CMD_SET_HIGH_COL,
-        SH1106_CMD_SET_START_LINE,
+        SH1106_CMD_SET_START_LINE, 
         SH1106_CMD_SET_CONTRAST,
         0xCFU,
         SH1106_CMD_SEG_REMAP,

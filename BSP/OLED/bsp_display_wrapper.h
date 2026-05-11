@@ -11,8 +11,6 @@
 #ifndef __BSP_DISPLAY_WRAPPER_H__
 #define __BSP_DISPLAY_WRAPPER_H__
 
-#include "bsp_oled_text.h"
-
 #include <stdint.h>
 
 #define BSP_DISPLAY_WRAPPER_DEV_NUM_MAX  (1U)
@@ -56,12 +54,6 @@ struct bsp_display_wrapper_dev
                                      uint16_t                   x,
                                      uint16_t                   y,
                                      const char                *text);
-    display_status_t (*pf_draw_text_by_font)(
-        bsp_display_wrapper_dev_t *const dev,
-        uint16_t                   x,
-        uint16_t                   y,
-        const char                *text,
-        oled_text_font_t           font);
     display_status_t (*pf_get_buffer)(bsp_display_wrapper_dev_t *const dev,
                                       uint8_t                **const buffer,
                                       uint16_t                *const size);
@@ -160,22 +152,6 @@ display_status_t bsp_display_wrapper_draw_pixel(uint16_t x,
 display_status_t bsp_display_wrapper_draw_text(uint16_t    x,
                                                uint16_t    y,
                                                const char *text);
-
-/**
- * @brief Draw one text string on the current device by selected font.
- *
- * @param[in] x    X coordinate.
- * @param[in] y    Y coordinate.
- * @param[in] text Text string.
- * @param[in] font Font size selector.
- *
- * @return Status code.
- */
-display_status_t bsp_display_wrapper_draw_text_by_font(
-    uint16_t          x,
-    uint16_t          y,
-    const char       *text,
-    oled_text_font_t  font);
 
 /**
  * @brief Get the current frame buffer.

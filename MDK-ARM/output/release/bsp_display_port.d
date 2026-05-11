@@ -1,8 +1,6 @@
 .\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_display_port.c
 .\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_display_port.h
 .\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_display_wrapper.h
-.\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_oled_text.h
-.\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_oled_driver.h
 .\output\release\bsp_display_port.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\release\bsp_display_port.o: ..\Middlewares\FreeRTOS\Inc\FreeRTOS.h
 .\output\release\bsp_display_port.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
@@ -31,8 +29,11 @@
 .\output\release\bsp_display_port.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\interrupts_hc32l19x.h
 .\output\release\bsp_display_port.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\ddl_device.h
 .\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_oled_handler.h
+.\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_oled_driver.h
+.\output\release\bsp_display_port.o: ..\BSP\OLED\bsp_oled_text.h
 .\output\release\bsp_display_port.o: ..\Middlewares\EasyLogger\inc\elog.h
 .\output\release\bsp_display_port.o: ..\Middlewares\EasyLogger\inc\elog_cfg.h
 .\output\release\bsp_display_port.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\output\release\bsp_display_port.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\spi.h
 .\output\release\bsp_display_port.o: ..\Middlewares\FreeRTOS\Inc\task.h
 .\output\release\bsp_display_port.o: ..\Middlewares\FreeRTOS\Inc\list.h

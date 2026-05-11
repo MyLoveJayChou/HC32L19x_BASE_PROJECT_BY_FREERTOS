@@ -17,21 +17,6 @@
 
 #define OLED_TEXT_GLYPH_ADV_SHIFT  (4U)
 
-static const lv_font_t *bsp_oled_text_get_font(oled_text_font_t font)
-{
-    switch (font)
-    {
-        case OLED_TEXT_FONT_14:
-            return &lv_font_cn_14;
-
-        case OLED_TEXT_FONT_16:
-            return &lv_font_cn_16;
-
-        default:
-            return NULL;
-    }
-}
-
 static uint32_t bsp_oled_text_utf8_decode(const char *text,
                                           uint8_t    *const step)
 {
@@ -150,15 +135,14 @@ static oled_driver_status_t bsp_oled_text_draw_glyph(
     return OLED_DRIVER_STATUS_OK;
 }
 
-oled_driver_status_t bsp_oled_text_draw_utf8_by_font(
+oled_driver_status_t bsp_oled_text_draw_utf8(
     bsp_oled_driver_t *const self,
     uint8_t                    x,
     uint8_t                    y,
-    const char                *text,
-    oled_text_font_t           font_type)
+    const char                *text)
 {
     oled_driver_status_t status    = OLED_DRIVER_STATUS_OK;
-    const lv_font_t     *font      = NULL;
+    const lv_font_t     *font      = &LV_FONT_CN_CURRENT;
     lv_font_glyph_dsc_t  glyph_dsc;
     const uint8_t       *bitmap    = NULL;
     const char          *cursor    = NULL;
@@ -170,12 +154,6 @@ oled_driver_status_t bsp_oled_text_draw_utf8_by_font(
     bool                 found     = false;
 
     if ((NULL == self) || (NULL == text))
-    {
-        return OLED_DRIVER_STATUS_ERROR_PARAM;
-    }
-
-    font = bsp_oled_text_get_font(font_type);
-    if (NULL == font)
     {
         return OLED_DRIVER_STATUS_ERROR_PARAM;
     }
@@ -246,19 +224,4 @@ oled_driver_status_t bsp_oled_text_draw_utf8_by_font(
     }
 
     return OLED_DRIVER_STATUS_OK;
-}
-
-oled_driver_status_t bsp_oled_text_draw_utf8(
-    bsp_oled_driver_t *const self,
-    uint8_t                    x,
-    uint8_t                    y,
-    const char                *text)
-{
-    return bsp_oled_text_draw_utf8_by_font(self,
-                                           x,
-                                           y,
-                                           text,
-                                           (0U != LVGL_USE_FONT_CN_14) ?
-                                           OLED_TEXT_FONT_14 :
-                                           OLED_TEXT_FONT_16);
 }

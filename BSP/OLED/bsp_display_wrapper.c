@@ -233,37 +233,6 @@ display_status_t bsp_display_wrapper_draw_text(uint16_t    x,
     return dev->pf_draw_text(dev, x, y, text);
 }
 
-display_status_t bsp_display_wrapper_draw_text_by_font(
-    uint16_t          x,
-    uint16_t          y,
-    const char       *text,
-    oled_text_font_t  font)
-{
-    display_status_t          status = BSP_DISPLAY_WRAPPER_STATUS_OK;
-    bsp_display_wrapper_dev_t *dev   = NULL;
-
-    if (NULL == text)
-    {
-        log_e("bsp_display_wrapper_draw_text_by_font: text error");
-        return BSP_DISPLAY_WRAPPER_STATUS_ERROR_PARAM;
-    }
-
-    status = bsp_display_wrapper_get_current_dev(&dev);
-    if (BSP_DISPLAY_WRAPPER_STATUS_OK != status)
-    {
-        log_e("bsp_display_wrapper_draw_text_by_font: current dev error");
-        return status;
-    }
-
-    if (NULL == dev->pf_draw_text_by_font)
-    {
-        log_e("bsp_display_wrapper_draw_text_by_font: current display not support");
-        return BSP_DISPLAY_WRAPPER_STATUS_ERROR_SOURCE;
-    }
-
-    return dev->pf_draw_text_by_font(dev, x, y, text, font);
-}
-
 display_status_t bsp_display_wrapper_get_buffer(uint8_t  **const buffer,
                                                 uint16_t  *const size)
 {

@@ -1,8 +1,8 @@
 Dependencies for Project 'HC32L19X', Target 'HC32L19X_BASE': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (.\startup_hc32l19x.s)(0x5D19A010)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "_RTE_ SETA 1"-o .\output\release\startup_hc32l19x.o --depend .\output\release\startup_hc32l19x.d)
-F (..\Core\Src\board.c)(0x69FECF38)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\board.o --omf_browse .\output\release\board.crf --depend .\output\release\board.d)
-I (..\Core\Inc\board.h)(0x69FECF38)
+F (..\Core\Src\board.c)(0x6A0199D6)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\board.o --omf_browse .\output\release\board.crf --depend .\output\release\board.d)
+I (..\Core\Inc\board.h)(0x6A017CDE)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\gpio.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\ddl.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\base_types.h)(0x5CD51F66)
@@ -22,8 +22,10 @@ I (..\Drivers\HC32L19x_HAL_Driver\Inc\sysctrl.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\interrupts_hc32l19x.h)(0x69FAD7F6)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\ddl_device.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\flash.h)(0x69FAD7F5)
-F (..\Core\Src\main.c)(0x69FED59E)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\main.o --omf_browse .\output\release\main.crf --depend .\output\release\main.d)
-I (..\Core\Inc\board.h)(0x69FECF38)
+I (..\Drivers\HC32L19x_HAL_Driver\Inc\reset.h)(0x69FAD7F5)
+I (..\Drivers\HC32L19x_HAL_Driver\Inc\spi.h)(0x69FAD7F5)
+F (..\Core\Src\main.c)(0x6A018521)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\main.o --omf_browse .\output\release\main.crf --depend .\output\release\main.d)
+I (..\Core\Inc\board.h)(0x6A017CDE)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\gpio.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\ddl.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\base_types.h)(0x5CD51F66)
@@ -43,9 +45,7 @@ I (..\Drivers\HC32L19x_HAL_Driver\Inc\sysctrl.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\interrupts_hc32l19x.h)(0x69FAD7F6)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\ddl_device.h)(0x69FAD7F5)
 I (..\BSP\OLED\bsp_display_port.h)(0x69FED073)
-I (..\BSP\OLED\bsp_display_wrapper.h)(0x69FED550)
-I (..\BSP\OLED\bsp_oled_text.h)(0x69FED4FE)
-I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
+I (..\BSP\OLED\bsp_display_wrapper.h)(0x6A0176F5)
 I (..\Middlewares\EasyLogger\inc\elog.h)(0x697716CA)
 I (..\Middlewares\EasyLogger\inc\elog_cfg.h)(0x69AE2FE4)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
@@ -75,37 +75,33 @@ I (..\Middlewares\FreeRTOS\Inc\portmacro.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\mpu_wrappers.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\task.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\list.h)(0x69F15EE9)
-F (..\BSP\OLED\bsp_oled_handler.c)(0x69FED5C1)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_oled_handler.o --omf_browse .\output\release\bsp_oled_handler.crf --depend .\output\release\bsp_oled_handler.d)
-I (..\BSP\OLED\bsp_oled_handler.h)(0x69FED520)
+F (..\BSP\OLED\bsp_oled_handler.c)(0x6A0176F5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_oled_handler.o --omf_browse .\output\release\bsp_oled_handler.crf --depend .\output\release\bsp_oled_handler.d)
+I (..\BSP\OLED\bsp_oled_handler.h)(0x6A0176F5)
 I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
-I (..\BSP\OLED\bsp_oled_text.h)(0x69FED4FE)
-I (..\BSP\OLED\lvgl.h)(0x69FED630)
+I (..\BSP\OLED\bsp_oled_text.h)(0x6A0176F4)
+I (..\BSP\OLED\lvgl.h)(0x6A017664)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
 I (..\Middlewares\EasyLogger\inc\elog.h)(0x697716CA)
 I (..\Middlewares\EasyLogger\inc\elog_cfg.h)(0x69AE2FE4)
-F (..\BSP\OLED\bsp_oled_driver.c)(0x69FD8E43)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_oled_driver.o --omf_browse .\output\release\bsp_oled_driver.crf --depend .\output\release\bsp_oled_driver.d)
-I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
-I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
-I (..\Middlewares\EasyLogger\inc\elog.h)(0x697716CA)
-I (..\Middlewares\EasyLogger\inc\elog_cfg.h)(0x69AE2FE4)
-I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
-I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
-F (..\BSP\OLED\bsp_display_wrapper.c)(0x69FED55C)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_display_wrapper.o --omf_browse .\output\release\bsp_display_wrapper.crf --depend .\output\release\bsp_display_wrapper.d)
-I (..\BSP\OLED\bsp_display_wrapper.h)(0x69FED550)
-I (..\BSP\OLED\bsp_oled_text.h)(0x69FED4FE)
+F (..\BSP\OLED\bsp_oled_driver.c)(0x6A018FC5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_oled_driver.o --omf_browse .\output\release\bsp_oled_driver.crf --depend .\output\release\bsp_oled_driver.d)
 I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Middlewares\EasyLogger\inc\elog.h)(0x697716CA)
 I (..\Middlewares\EasyLogger\inc\elog_cfg.h)(0x69AE2FE4)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
-F (..\BSP\OLED\bsp_display_port.c)(0x69FED56C)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_display_port.o --omf_browse .\output\release\bsp_display_port.crf --depend .\output\release\bsp_display_port.d)
+F (..\BSP\OLED\bsp_display_wrapper.c)(0x6A0176F5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_display_wrapper.o --omf_browse .\output\release\bsp_display_wrapper.crf --depend .\output\release\bsp_display_wrapper.d)
+I (..\BSP\OLED\bsp_display_wrapper.h)(0x6A0176F5)
+I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\Middlewares\EasyLogger\inc\elog.h)(0x697716CA)
+I (..\Middlewares\EasyLogger\inc\elog_cfg.h)(0x69AE2FE4)
+I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+F (..\BSP\OLED\bsp_display_port.c)(0x6A0199D6)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_display_port.o --omf_browse .\output\release\bsp_display_port.crf --depend .\output\release\bsp_display_port.d)
 I (..\BSP\OLED\bsp_display_port.h)(0x69FED073)
-I (..\BSP\OLED\bsp_display_wrapper.h)(0x69FED550)
-I (..\BSP\OLED\bsp_oled_text.h)(0x69FED4FE)
-I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
+I (..\BSP\OLED\bsp_display_wrapper.h)(0x6A0176F5)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Middlewares\FreeRTOS\Inc\FreeRTOS.h)(0x69F15EE9)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
@@ -120,7 +116,7 @@ I (..\Middlewares\FreeRTOS\Inc\portable.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\deprecated_definitions.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\portmacro.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\mpu_wrappers.h)(0x69F15EE9)
-I (..\Core\Inc\board.h)(0x69FECF38)
+I (..\Core\Inc\board.h)(0x6A017CDE)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\gpio.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\ddl.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\base_types.h)(0x5CD51F66)
@@ -132,33 +128,36 @@ I (..\Core\Inc\system_hc32l19x.h)(0x5D19A010)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\sysctrl.h)(0x69FAD7F5)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\interrupts_hc32l19x.h)(0x69FAD7F6)
 I (..\Drivers\HC32L19x_HAL_Driver\Inc\ddl_device.h)(0x69FAD7F5)
-I (..\BSP\OLED\bsp_oled_handler.h)(0x69FED520)
+I (..\BSP\OLED\bsp_oled_handler.h)(0x6A0176F5)
+I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
+I (..\BSP\OLED\bsp_oled_text.h)(0x6A0176F4)
 I (..\Middlewares\EasyLogger\inc\elog.h)(0x697716CA)
 I (..\Middlewares\EasyLogger\inc\elog_cfg.h)(0x69AE2FE4)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (..\Drivers\HC32L19x_HAL_Driver\Inc\spi.h)(0x69FAD7F5)
 I (..\Middlewares\FreeRTOS\Inc\task.h)(0x69F15EE9)
 I (..\Middlewares\FreeRTOS\Inc\list.h)(0x69F15EE9)
-F (..\BSP\OLED\bsp_oled_text.c)(0x69FED511)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_oled_text.o --omf_browse .\output\release\bsp_oled_text.crf --depend .\output\release\bsp_oled_text.d)
-I (..\BSP\OLED\bsp_oled_text.h)(0x69FED4FE)
+F (..\BSP\OLED\bsp_oled_text.c)(0x6A0176F4)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\bsp_oled_text.o --omf_browse .\output\release\bsp_oled_text.crf --depend .\output\release\bsp_oled_text.d)
+I (..\BSP\OLED\bsp_oled_text.h)(0x6A0176F4)
 I (..\BSP\OLED\bsp_oled_driver.h)(0x69FD8DCD)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
-I (..\BSP\OLED\lvgl.h)(0x69FED630)
+I (..\BSP\OLED\lvgl.h)(0x6A017664)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
 I (..\BSP\OLED\lv_font_cn_14.h)(0x69FED254)
 I (..\BSP\OLED\lv_font_cn_16.h)(0x69FE8E8E)
 F (..\BSP\OLED\lvgl_font_port.c)(0x69FE8E8E)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\lvgl_font_port.o --omf_browse .\output\release\lvgl_font_port.crf --depend .\output\release\lvgl_font_port.d)
-I (..\BSP\OLED\lvgl.h)(0x69FED630)
+I (..\BSP\OLED\lvgl.h)(0x6A017664)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
 F (..\BSP\OLED\lv_font_cn_16.c)(0x69FE8EDB)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\lv_font_cn_16.o --omf_browse .\output\release\lv_font_cn_16.crf --depend .\output\release\lv_font_cn_16.d)
-I (..\BSP\OLED\lvgl.h)(0x69FED630)
+I (..\BSP\OLED\lvgl.h)(0x6A017664)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
 F (..\BSP\OLED\lv_font_cn_14.c)(0x69FED30A)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\Drivers\CMSIS\Core\Include -I ..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include -I ..\Drivers\HC32L19x_HAL_Driver\Inc -I ..\Middlewares\SEGGER -I ..\Middlewares\EasyLogger\inc -I ..\Middlewares\SM4_CTR -I ..\Middlewares\FreeRTOS\Inc -I ..\BSP\OLED-I.\RTE\_HC32L19X_BASE-ID:\Softwares\KEIL\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Softwares\KEIL\Pack\HDSC\HC32L19x\1.1.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o .\output\release\lv_font_cn_14.o --omf_browse .\output\release\lv_font_cn_14.crf --depend .\output\release\lv_font_cn_14.d)
-I (..\BSP\OLED\lvgl.h)(0x69FED630)
+I (..\BSP\OLED\lvgl.h)(0x6A017664)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdbool.h)(0x6025237C)
 I (D:\Softwares\KEIL\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)

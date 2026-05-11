@@ -18,16 +18,7 @@ int main(void)
     log_d("System clock: %u Hz", SystemCoreClock);
 
     bsp_display_port_init();
-
-    bsp_display_wrapper_draw_text_by_font(30,
-                                          6,
-                                          "图鲸卫星",
-                                          OLED_TEXT_FONT_14);
-    bsp_display_wrapper_draw_text_by_font(26,
-                                          30,
-                                          "图鲸卫星",
-                                          OLED_TEXT_FONT_16);
-
+    bsp_display_wrapper_fill(1U);
     bsp_display_wrapper_refresh();
 
     vTaskStartScheduler();
