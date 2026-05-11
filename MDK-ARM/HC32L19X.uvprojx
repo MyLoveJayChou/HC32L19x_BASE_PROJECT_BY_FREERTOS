@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core\Inc;..\Drivers\CMSIS\Core\Include;..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include;..\Drivers\HC32L19x_HAL_Driver\Inc;..\Middlewares\SEGGER;..\Middlewares\EasyLogger\inc;..\Middlewares\SM4_CTR;..\Middlewares\FreeRTOS\Inc</IncludePath>
+              <IncludePath>..\Core\Inc;..\Drivers\CMSIS\Core\Include;..\Drivers\CMSIS\Device\HDSC\HC32L19x\Include;..\Drivers\HC32L19x_HAL_Driver\Inc;..\Middlewares\SEGGER;..\Middlewares\EasyLogger\inc;..\Middlewares\SM4_CTR;..\Middlewares\FreeRTOS\Inc;..\BSP\OLED</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,6 +396,11 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\board.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\main.c</FilePath>
@@ -404,6 +409,51 @@
               <FileName>hc32l19x_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\hc32l19x_it.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP/OLED</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_oled_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\bsp_oled_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_oled_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\bsp_oled_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_display_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\bsp_display_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_display_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\bsp_display_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_oled_text.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\bsp_oled_text.c</FilePath>
+            </File>
+            <File>
+              <FileName>lvgl_font_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\lvgl_font_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_font_cn_16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\lv_font_cn_16.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_font_cn_14.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\OLED\lv_font_cn_14.c</FilePath>
             </File>
           </Files>
         </Group>

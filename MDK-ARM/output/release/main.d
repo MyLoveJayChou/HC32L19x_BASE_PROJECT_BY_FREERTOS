@@ -1,4 +1,5 @@
 .\output\release\main.o: ..\Core\Src\main.c
+.\output\release\main.o: ..\Core\Inc\board.h
 .\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\gpio.h
 .\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\ddl.h
 .\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\base_types.h
@@ -18,10 +19,13 @@
 .\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\ddl.h
 .\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\interrupts_hc32l19x.h
 .\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\ddl_device.h
+.\output\release\main.o: ..\BSP\OLED\bsp_display_port.h
+.\output\release\main.o: ..\BSP\OLED\bsp_display_wrapper.h
+.\output\release\main.o: ..\BSP\OLED\bsp_oled_text.h
+.\output\release\main.o: ..\BSP\OLED\bsp_oled_driver.h
 .\output\release\main.o: ..\Middlewares\EasyLogger\inc\elog.h
 .\output\release\main.o: ..\Middlewares\EasyLogger\inc\elog_cfg.h
 .\output\release\main.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
-.\output\release\main.o: ..\Drivers\HC32L19x_HAL_Driver\Inc\flash.h
 .\output\release\main.o: ..\Middlewares\FreeRTOS\Inc\FreeRTOS.h
 .\output\release\main.o: ..\Core\Inc\FreeRTOSConfig.h
 .\output\release\main.o: ..\Middlewares\FreeRTOS\Inc\projdefs.h

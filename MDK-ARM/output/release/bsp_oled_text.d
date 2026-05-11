@@ -1,0 +1,9 @@
+.\output\release\bsp_oled_text.o: ..\BSP\OLED\bsp_oled_text.c
+.\output\release\bsp_oled_text.o: ..\BSP\OLED\bsp_oled_text.h
+.\output\release\bsp_oled_text.o: ..\BSP\OLED\bsp_oled_driver.h
+.\output\release\bsp_oled_text.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\release\bsp_oled_text.o: ..\BSP\OLED\lvgl.h
+.\output\release\bsp_oled_text.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\release\bsp_oled_text.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\output\release\bsp_oled_text.o: ..\BSP\OLED\lv_font_cn_14.h
+.\output\release\bsp_oled_text.o: ..\BSP\OLED\lv_font_cn_16.h

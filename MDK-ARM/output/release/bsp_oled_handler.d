@@ -1,0 +1,10 @@
+.\output\release\bsp_oled_handler.o: ..\BSP\OLED\bsp_oled_handler.c
+.\output\release\bsp_oled_handler.o: ..\BSP\OLED\bsp_oled_handler.h
+.\output\release\bsp_oled_handler.o: ..\BSP\OLED\bsp_oled_driver.h
+.\output\release\bsp_oled_handler.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\release\bsp_oled_handler.o: ..\BSP\OLED\bsp_oled_text.h
+.\output\release\bsp_oled_handler.o: ..\BSP\OLED\lvgl.h
+.\output\release\bsp_oled_handler.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\release\bsp_oled_handler.o: D:\Softwares\KEIL\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\output\release\bsp_oled_handler.o: ..\Middlewares\EasyLogger\inc\elog.h
+.\output\release\bsp_oled_handler.o: ..\Middlewares\EasyLogger\inc\elog_cfg.h
